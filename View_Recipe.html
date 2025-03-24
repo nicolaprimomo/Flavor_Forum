@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Recipe – Flavor Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffefc;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background-color: #f78f3f;
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-icon i {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .header-right a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .recipe-frame {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .recipe-hero {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      margin-bottom: 12px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #444;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      border-radius: 20px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .body-text {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    .votes {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .vote-btn {
+      background: #fff;
+      color: #f78f3f;
+      border: 2px solid #f78f3f;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .vote-btn:hover {
+      background: #f78f3f;
+      color: white;
+    }
+
+    .comments-section {
+      margin-top: 30px;
+    }
+
+    .comments-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .comment {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+
+    .comment .author {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .comment .text {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .comment-form {
+      margin-top: 20px;
+    }
+
+    .comment-form textarea {
+      width: 100%;
+      height: 80px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .comment-form button {
+      padding: 10px 16px;
+      background: #f78f3f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .comment-form button:hover {
+      background: #e57c2a;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .recipe-frame {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flavor Forum</div>
+    <div class="header-right">
+      <span class="nav-icon"><i class="fas fa-search"></i></span>
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <img class="profile-icon" src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/illustration-of-chef-avatar-working-in-a-restaurant-head-chef-avatar-for-social-networks-vector.jpg?v=1742736145070" alt="Profile" />
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="recipe-frame">
+      <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/https-%3A%3Awww.jocooks.com%3Awp-content%3Auploads%3A2012%3A05%3Acreamy-carbonara-1.jpg?v=1742731172750" alt="Spaghetti Carbonara" class="recipe-hero"/>
+    </div>
+
+    <div class="title">Spaghetti Carbonara</div>
+    <div class="meta">Posted by <strong>Chef_Ella</strong> · 2 days ago</div>
+
+    <div class="tags">
+      <span>Dinner</span>
+      <span>Pasta</span>
+      <span>Comfort Food</span>
+    </div>
+
+    <div class="body-text">
+      This classic Italian pasta dish is rich, creamy, and packed with flavor — without using any cream. Spaghetti is tossed with crispy pancetta, eggs, Parmesan cheese, and freshly cracked black pepper.
+
+      1) Prep Sauce: Whisk eggs, parmesan cheese, & black pepper in a bowl & set aside.  
+      2) Boil Pasta: Cook pasta until it is ‘al dente’. Do not rinse the pasta.  
+      3) Toss Together: Quickly add the egg mixture to the hot cooked pasta & toss to combine.  
+      4) Top with a sprinkle of parmesan cheese and a little chopped parsley for garnish!
+    </div>
+
+    <div class="votes">
+      <button class="vote-btn">▲ Upvote <i class="fas fa-arrow-up"></i></button>
+      <span>128 points</span>
+      <button class="vote-btn">▼ Downvote <i class="fas fa-arrow-down"></i></button>
+    </div>
+
+    <div class="comments-section">
+      <h2>Comments</h2>
+
+      <div class="comment">
+        <div class="author">foodie_jane</div>
+        <div class="text">Tried this last night — turned out amazing! My whole family loved it.</div>
+      </div>
+
+      <div class="comment">
+        <div class="author">Pastalover22</div>
+        <div class="text">I added mushrooms and it worked so well! Great recipe.</div>
+      </div>
+
+      <div class="comment-form">
+        <textarea placeholder="Leave a comment..."></textarea>
+        <button>Post Comment</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

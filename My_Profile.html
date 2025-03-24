@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile – Flavor Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffefc;
+      color: #333;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background-color: #f78f3f;
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icon i {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .profile-header {
+      text-align: center;
+      padding: 30px 20px 20px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #f78f3f;
+      margin-bottom: 12px;
+    }
+
+    .username {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .bio {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .edit-btn {
+      font-size: 0.85rem;
+      color: #f78f3f;
+      background: none;
+      border: 1px solid #f78f3f;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .edit-btn:hover {
+      background: #f78f3f;
+      color: white;
+    }
+
+    .logout-btn {
+      font-size: 0.85rem;
+      color: #f78f3f;
+      background: none;
+      border: 1px solid #f78f3f;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .logout-btn:hover {
+      background: #f78f3f;
+      color: white;
+    }
+
+    .section {
+      padding: 0 16px;
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: #f78f3f;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .recipe-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .recipe-card h3 {
+      padding: 12px 16px 4px;
+      font-size: 1.05rem;
+    }
+
+    .recipe-card p {
+      padding: 0 16px 12px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .show-all-btn-container {
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .show-all-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      background-color: #f78f3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .show-all-btn:hover {
+      background-color: #e57c2a;
+    }
+
+    @media (min-width: 768px) {
+      .recipe-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .recipe-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flavor Forum</div>
+    <div class="header-right">
+      <span class="nav-icon"><i class="fas fa-search"></i></span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+      </nav>
+      <img class="profile-icon" src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/illustration-of-chef-avatar-working-in-a-restaurant-head-chef-avatar-for-social-networks-vector.jpg?v=1742736145070" alt="Profile" />
+    </div>
+  </header>
+
+  <div class="profile-header">
+    <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/illustration-of-chef-avatar-working-in-a-restaurant-head-chef-avatar-for-social-networks-vector.jpg?v=1742736145070" alt="User Avatar" class="avatar" />
+    <div class="username">@chef_mario</div>
+    <div class="bio">Passionate about creating delicious dishes with love and creativity. Always experimenting with new flavors!</div>
+    <button class="edit-btn" onclick="window.location.href='edit-profile.html'">Edit Profile</button>
+    <button class="logout-btn" onclick="window.location.href='logout.html'">Log Out</button>
+  </div>
+
+  <div class="section">
+    <h2>My Posts</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/pizza-napolitaine.jpg?v=1742736155803" alt="Pizza"/>
+        <h3>Neapolitan Pizza</h3>
+        <p>Classic crust, tangy tomato sauce, fresh mozzarella.</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/85389-gourmet-mushroom-risotto-DDMFS-4x3-a8a80a8deb064c6a8f15452b808a0258.jpg?v=1742736150840" alt="Risotto"/>
+        <h3>Mushroom Risotto</h3>
+        <p>Rich, creamy, and full of umami goodness.</p>
+      </div>
+    </div>
+    <div class="show-all-btn-container">
+      <a href="my-posts.html" class="show-all-btn">Show All</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Saved Recipes</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/The-Perfect-Steak-with-Garlic-Butter_113.jpg?v=1742735085940" alt="Steak"/>
+        <h3>Garlic Butter Steak</h3>
+        <p>Juicy, tender steak with a garlic herb crust.</p>
+      </div>
+      <div class="recipe-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/double-fudge-brownies-with-ice-cream-17.jpg?v=1742735074627" alt="Brownies"/>
+        <h3>Fudgy Brownies</h3>
+        <p>Rich chocolatey goodness with crackly tops.</p>
+      </div>
+    </div>
+    <div class="show-all-btn-container">
+      <a href="saved-recipes.html" class="show-all-btn">Show All</a>
+    </div>
+  </div>
+</body>
+</html>

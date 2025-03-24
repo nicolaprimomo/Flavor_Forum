@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Post – Flavor Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffefc;
+      color: #333;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #f78f3f;
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icon i {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #f78f3f;
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    input[type="file"] {
+      margin-bottom: 18px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 140px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-save {
+      background: #f78f3f;
+      color: white;
+    }
+
+    .btn-save:hover {
+      background: #e57c2a;
+    }
+
+    .btn-cancel {
+      background: #ddd;
+      color: #333;
+    }
+
+    .btn-cancel:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flavor Forum</div>
+    <div class="header-right">
+      <span class="nav-icon"><i class="fas fa-search"></i></span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+      </nav>
+      <img class="profile-icon" src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/illustration-of-chef-avatar-working-in-a-restaurant-head-chef-avatar-for-social-networks-vector.jpg?v=1742736145070" alt="Profile" />
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Edit Your Recipe</h1>
+    <form>
+      <label for="title">Title</label>
+      <input type="text" id="title" value="Neapolitan Pizza" />
+
+      <label for="body">Recipe Instructions</label>
+      <textarea id="body">Drizzle with olive oil and serve hot.</textarea>
+
+      <label for="tags">Tags</label>
+      <input type="text" id="tags" value="Pizza, Italian, Dinner" />
+
+      <label for="image">Update Image</label>
+      <input type="file" id="image" accept="image/*" />
+
+      <div class="button-group">
+        <button type="submit" class="btn btn-save">Save Changes</button>
+        <button type="button" class="btn btn-cancel">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

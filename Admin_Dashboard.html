@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard – Flavor Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffefc;
+      color: #333;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #d84315;
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #d84315;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .card .content {
+      margin-bottom: 12px;
+    }
+
+    .card .meta {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .btn-delete {
+      background: #ff4d4d;
+      color: white;
+    }
+
+    .btn-delete:hover {
+      background: #e13b3b;
+    }
+
+    .btn-ban {
+      background: #ff9800;
+      color: white;
+    }
+
+    .btn-ban:hover {
+      background: #e08200;
+    }
+
+    .btn-dismiss {
+      background: #ccc;
+      color: #333;
+    }
+
+    .btn-dismiss:hover {
+      background: #bbb;
+    }
+
+    @media (min-width: 768px) {
+      .card-actions {
+        justify-content: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flavor Forum – Admin</div>
+  </header>
+
+  <div class="container">
+    <h1>Content Moderation Panel</h1>
+
+    <div class="card">
+      <div class="meta">Post flagged by user: <strong>foodie_jane</strong> · 2 hours ago</div>
+      <div class="content"><strong>"How to boil water"</strong> — This post was marked as spam.</div>
+      <div class="card-actions">
+        <button class="btn btn-delete">Delete Post</button>
+        <button class="btn btn-ban">Suspend User</button>
+        <button class="btn btn-dismiss">Dismiss</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="meta">Comment flagged by user: <strong>chef_bob</strong> · 5 hours ago</div>
+      <div class="content">"Your recipe sucks lol" — Comment reported for harassment.</div>
+      <div class="card-actions">
+        <button class="btn btn-delete">Delete Comment</button>
+        <button class="btn btn-ban">Ban User</button>
+        <button class="btn btn-dismiss">Dismiss</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="meta">Post flagged by user: <strong>veganqueen</strong> · 1 day ago</div>
+      <div class="content"><strong>"Bacon Cheeseburger Lasagna"</strong> — Flagged for offensive content (jokingly).</div>
+      <div class="card-actions">
+        <button class="btn btn-delete">Delete Post</button>
+        <button class="btn btn-ban">Suspend User</button>
+        <button class="btn btn-dismiss">Dismiss</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

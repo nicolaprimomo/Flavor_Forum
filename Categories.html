@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categories – Flavor Forum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fffefc;
+      color: #333;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #f78f3f;
+      padding: 16px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-icon i {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .profile-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .container {
+      padding: 24px 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+      text-align: center;
+      color: #f78f3f;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .category-card h3 {
+      font-size: 1.05rem;
+      padding: 10px 12px 2px;
+    }
+
+    .category-card p {
+      font-size: 0.85rem;
+      color: #666;
+      padding: 0 12px 14px;
+    }
+
+    @media (min-width: 600px) {
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .category-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .category-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Flavor Forum</div>
+    <div class="header-right">
+      <span class="nav-icon"><i class="fas fa-search"></i></span>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+      </nav>
+      <img class="profile-icon" src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/illustration-of-chef-avatar-working-in-a-restaurant-head-chef-avatar-for-social-networks-vector.jpg?v=1742736145070" alt="Profile" />
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Explore Recipe Categories</h1>
+    <div class="subtitle">Find the perfect recipe based on what you're craving</div>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/Wk-36-Classic-Breakfast-1.jpg?v=1742732742784" alt="Breakfast">
+        <h3>Breakfast</h3>
+        <p>Start your day right with energizing meals.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/roast_chicken_for_one_41998_16x9.jpg?v=1742732747340" alt="Lunch">
+        <h3>Lunch</h3>
+        <p>Quick and tasty midday favorites.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/10867983783_854a7fec8f_o.jpg?v=1742732752131" alt="Dinner">
+        <h3>Dinner</h3>
+        <p>Hearty recipes for evening satisfaction.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/summer-desserts-1.jpg?v=1742733237923" alt="Dessert">
+        <h3>Dessert</h3>
+        <p>Sweet treats for every occasion.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/Ponzu-tofu-poke-bowl-8733c67.jpg.webp?v=1742733222429" alt="Vegan">
+        <h3>Vegan</h3>
+        <p>Plant-powered meals full of flavor.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/steak-au-poivre-red-wine-pan-sauce-hero-01-FT-RECIPE1222-c9e1da15f33f4076986b6ce37ae5bbb0.jpg?v=1742733205554" alt="Meat Lovers">
+        <h3>Meat Lovers</h3>
+        <p>Steak, chicken, BBQ and beyond.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/Greek-yogurt-alfredo-sauce.jpg?v=1742733679391" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Comfort food with international flair.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/Gluten-free-food-1139277998-Blog-MainArticleImage.webp?v=1742733674327" alt="Gluten-Free">
+        <h3>Gluten-Free</h3>
+        <p>Tasty meals without the wheat.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/caesar-salad-recipe-1160x1567.jpg?v=1742733670222" alt="Salads">
+        <h3>Salads</h3>
+        <p>Fresh, crisp and healthy combinations.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/chicken-quesadillas-vertical-2-668eeabf8d6ae.jpg.avif?v=1742734057536" alt="Quick & Easy">
+        <h3>Quick & Easy</h3>
+        <p>Delicious in under 30 minutes.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/Holiday_Meal_Makeover_0.jpg?v=1742734070295" alt="Holiday Specials">
+        <h3>Holiday Specials</h3>
+        <p>Festive recipes for every celebration.</p>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn.glitch.global/1c330ad4-4372-432b-9d73-396bcbeb2fa4/26887_CheeseAppetizers_0484_Creamy-Spinach-Ricotta-Crostini-2000-92ef12e26ea1426991e251424167f7ca.jpg?v=1742734048910" alt="Snacks">
+        <h3>Snacks</h3>
+        <p>Small bites, big satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
